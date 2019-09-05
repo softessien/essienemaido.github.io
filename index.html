@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Me | Emaido Essien</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aquamarine;
+            font-size:large
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+        
+        input[type=text], input[type=email],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <h2>Contact Me</h2>
+    <p>Please kindly fill as required and leave a message for me. Thanks. </p>
+
+    <div class="container">
+        <form action="https://formspree.io/softessien@gmail.com" method ="POST" name="myForm" onsubmit="return(validateForm());">
+            <label for="firstname">Full Name</label>
+            <input type="text" name="firstname" minlength="4" placeholder="Firstname Surname" required>
+
+            <label for="Email">Email</label>
+            <input type="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="Email" placeholder="myname@domain.com" required>
+
+            <label for="title">Title</label>
+            <input type="text" name="Title" placeholder="Hello">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="subject" minlength="20" placeholder="Write something.." style="height:200px" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+<!--
+<script type="text/javascript">
+    function validateForm() {
+        if (document.myForm.name.value == "") {
+            alert('Name is required.');
+            firstname.focus();
+            return false;
+        }
+        if (document.myForm.lastname.value == "") {
+        alert('Name is required.');
+        lastname.focus();
+        return false;
+        }
+        if (document.myForm.Email.value == "") {
+            alert('Email address is required.');
+            Email.focus();
+            return false;
+        }
+        if (document.myForm.Email.value.indexOf("@") < 1 || document.myFormEmail.value.indexOf(".") < 1) {
+            alert('Please enter a valid email address.');
+            Email.focus();
+            return false;
+        }
+        if (Comments.value == "") {
+            alert('Please enter comments or questions.');
+            Comments.focus();
+            return false;
+        }
+        return true;
+    }
+</script> -->
+</html>
